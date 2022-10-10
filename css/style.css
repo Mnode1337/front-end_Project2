@@ -1,0 +1,62 @@
+/* RESET */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* RESET */
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+header {
+	display: flex;
+	width: 90%;
+	height: 10vh;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+}
+
+/* we are going to add some style that will be share
+	by the 3 classes
+ */
+.logo-container,
+.nav-links,
+.cart {
+	display: flex;
+}
+
+.logo-container {
+	background-color: lightblue;
+	flex: 1;
+}
+
+.logo {
+	font-weight: 400;
+	margin: 5px;
+}
+
+nav {
+	background-color: rgb(189, 230, 173);
+	flex: 2;
+}
+
+.nav-links {
+	list-style-type: none;
+	justify-content: space-around;
+}
+
+.nav-link {
+	color: #5f5f79;
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+.cart {
+	background-color: rgb(156, 37, 21);
+	flex: 1;
+}
