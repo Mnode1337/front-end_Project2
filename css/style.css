@@ -99,8 +99,7 @@ nav {
 	padding: 50px 0 0 0;
 }
 
-.cta-select,
-.cta-add {
+.cta-select {
 	border: 2px solid var(--ROSE);
 	background: transparent;
 	color: var(--ROSE);
@@ -110,10 +109,106 @@ nav {
 	font-size: 16px;
 }
 
+.cta-add {
+	background: var(--ROSE);
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 16px;
+	border: none;
+	color: #fff;
+	margin: 30px 0 0 30px;
+}
+
 .cover {
 	flex: 1;
+	display: flex;
+	justify-content: center;
+	height: 60vh;
 }
 
 .cover img {
-	height: 60vh;
+	height: 100%;
+	filter: drop-shadow(0px 5px 3px black);
+	z-index: 1;
+	animation: drop 1.5s;
+}
+
+.big-circle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0.9;
+	height: 80%;
+}
+
+.medium-circle {
+	position: absolute;
+	top: 30%;
+	right: 30%;
+	opacity: 0.5;
+	height: 60%;
+}
+
+.small-circle {
+	position: absolute;
+	bottom: 0%;
+	left: 20%;
+}
+
+.laptop-select {
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	position: absolute;
+	right: 20%;
+}
+
+@keyframes drop {
+	0% {
+		opacity: 0;
+		transform: translateY(-80px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.presentation {
+		flex-direction: column;
+	}
+	.introduction {
+		margin-top: 5vh;
+		text-align: center;
+	}
+
+	.intro-text h1 {
+		font-size: 30px;
+	}
+
+	.intro-text p {
+		font-size: 18px;
+	}
+	.cta {
+		padding: 10px 0 0 0;
+	}
+
+	.laptop-select {
+		bottom: 5%;
+		right: 50%;
+		width: 50%;
+		transform: translate(50%, 50%);
+	}
+
+	.cover img {
+		height: 80%;
+	}
+
+	.small-circle,
+	.medium-circle,
+	.big-circle {
+		opacity: 0.2;
+	}
 }
